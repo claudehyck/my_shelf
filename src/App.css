@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  background-color: #FDFFF4; /* Ivory */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #3A331E;
+}
+
+.app-main {
+  min-height: 100vh;
+  background-color: #FDFFF4;
+}

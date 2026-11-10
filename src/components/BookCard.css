@@ -1,0 +1,94 @@
+.book-card {
+  border: 1px solid #EAD392; /* Vanilla Custard */
+  border-radius: 10px;
+  padding: 16px;
+  background-color: #F6F3C8; /* Lemon Chiffon */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(186, 171, 53, 0.2);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.badge-kategori {
+  font-size: 12px;
+  background-color: #EAD392; /* Vanilla Custard */
+  color: #5C501F;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.badge-status {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.badge-status.selesai {
+  color: #5C501F;
+  background-color: #E2DA78; /* Old Gold versi lembut */
+}
+
+.badge-status.proses {
+  color: #8C322B;
+  background-color: #F5ABA4; /* Powder Blush */
+}
+
+.card-body h3 {
+  margin: 12px 0 6px 0;
+  color: #3A331E;
+}
+
+.card-body p {
+  margin: 0;
+  color: #6E6446;
+  font-size: 14px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  border-top: 1px solid #EAD392;
+  padding-top: 10px;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #BAAB35; /* Old Gold */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.card-footer a:hover {
+  color: #8C7F24;
+}
+
+.btn-hapus {
+  background: none;
+  border: none;
+  color: #D96A60; /* Merah hangat senada dengan Powder Blush */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+.btn-hapus:hover {
+  color: #B54A41;
+}
