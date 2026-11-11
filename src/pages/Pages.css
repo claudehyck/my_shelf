@@ -1,0 +1,97 @@
+.page-container {
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #3A331E;
+}
+
+.page-container h1 {
+  color: #BAAB35; 
+  font-weight: 700;
+  margin-bottom: 25px; 
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #FDFFF4;
+  border: 1.5px solid #EAD392; 
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 20px 0;
+  gap: 10px;
+  max-width: 350px;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  color: #3A331E;
+}
+
+.search-box input::placeholder {
+  color: #9E9473;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.form-box {
+  background: #F6F3C8; 
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #EAD392;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #4A4026;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #EAD392;
+  background-color: #FDFFF4; 
+  color: #3A331E;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid #BAAB35;
+}
+
+.btn-simpan {
+  background-color: #F5ABA4;
+  color: #522521;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-simpan:hover {
+  background-color: #E8958E;
+}
