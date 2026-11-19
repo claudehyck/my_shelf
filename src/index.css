@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
 
 :root {
-  --bg: #F5EEDC;          /* kertas krem */
-  --paper: #FFFBF1;       /* kartu / halaman buku */
-  --green: #2E4A3B;       /* hijau rak perpustakaan */
+  --bg: #F5EEDC;          
+  --paper: #FFFBF1;       
+  --green: #2E4A3B;      
   --green-dark: #1F3328;
-  --gold: #B8862F;        /* emas tua */
+  --gold: #B8862F;        
   --gold-soft: #F0DFB5;
-  --brown: #6B4F3A;       /* kayu */
+  --brown: #6B4F3A;      
   --text: #2B2118;
   --muted: #7B6B58;
   --border: #E3D5B5;
