@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Book } from "lucide-react";
 
-// Menampilkan sampul buku. Kalau gambar kosong/gagal dimuat, tampil sampul pengganti.
-// props: src (link gambar), title (judul), size ("sm" | "md" | "lg")
 export default function BookCover({ src, title, size = "md" }) {
   const [error, setError] = useState(false);
 

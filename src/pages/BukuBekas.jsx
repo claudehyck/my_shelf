@@ -6,7 +6,7 @@ import "./Pages.css";
 
 export default function BukuBekas({ usedBooks, onOrder }) {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selected, setSelected] = useState(null); // buku yang sedang dipesan
+  const [selected, setSelected] = useState(null); 
 
   const filtered = usedBooks.filter((u) =>
     u.title.toLowerCase().includes(searchTerm.toLowerCase())

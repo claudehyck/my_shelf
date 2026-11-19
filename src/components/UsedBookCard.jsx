@@ -3,10 +3,9 @@ import BookCover from "./BookCover";
 import { formatRupiah } from "../utils/format";
 import "./BookCard.css";
 
-// Kartu buku bekas. props: item (data buku bekas), onOrder (fungsi saat tombol Pesan diklik)
 export default function UsedBookCard({ item, onOrder }) {
   const tersedia = item.status === "Tersedia";
-  const kondisiClass = item.condition.toLowerCase().replace(" ", "-"); // "seperti-baru"
+  const kondisiClass = item.condition.toLowerCase().replace(" ", "-"); 
 
   return (
     <div className={`book-card ${tersedia ? "" : "dim"}`}>

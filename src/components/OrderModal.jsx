@@ -3,8 +3,6 @@ import { X, Check, Send } from "lucide-react";
 import BookCover from "./BookCover";
 import { formatRupiah } from "../utils/format";
 
-// Form pemesanan buku bekas (pop-up).
-// props: item (buku yang dipesan), onClose, onSubmit(dataPembeli)
 export default function OrderModal({ item, onClose, onSubmit }) {
   const [form, setForm] = useState({ name: "", phone: "", address: "", note: "" });
   const [done, setDone] = useState(false);

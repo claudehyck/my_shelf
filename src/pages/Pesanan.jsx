@@ -2,7 +2,7 @@ import { Package, Phone, MapPin, StickyNote } from "lucide-react";
 import { formatRupiah } from "../utils/format";
 import "./Pages.css";
 
-// Halaman untuk pemilik: daftar pesanan buku bekas yang masuk.
+
 export default function Pesanan({ orders }) {
   return (
     <div className="page-container narrow">

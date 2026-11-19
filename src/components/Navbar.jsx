@@ -4,7 +4,7 @@ import { BookOpen, PlusCircle, Home, ShoppingBag, Package, Menu, X } from "lucid
 import "./Navbar.css";
 
 export default function Navbar({ orderCount }) {
-  const [open, setOpen] = useState(false); // buka/tutup menu di HP
+  const [open, setOpen] = useState(false); 
 
   const closeMenu = () => setOpen(false);
 

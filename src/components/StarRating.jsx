@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Star } from "lucide-react";
 
-// Bintang rating.
-// props: value (0-5), size, onChange (opsional -> kalau ada, bintang bisa diklik)
 export default function StarRating({ value = 0, size = 18, onChange }) {
   const [hover, setHover] = useState(0);
   const active = Math.round(hover || value);

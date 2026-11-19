@@ -31,7 +31,7 @@ export default function DetailBuku({ books, usedBooks, comments, onAddComment })
     (u) => u.title.toLowerCase() === book.title.toLowerCase() && u.status === "Tersedia"
   );
 
-  // data informasi buku -> ditampilkan dengan .map()
+
   const facts = [
     { icon: <User size={16} />, label: "Penulis", value: book.author },
     { icon: <Building2 size={16} />, label: "Penerbit", value: book.publisher },

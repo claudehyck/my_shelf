@@ -3,8 +3,6 @@ import { MessageCircle, Send, User } from "lucide-react";
 import StarRating from "./StarRating";
 import { tanggalHariIni } from "../utils/format";
 
-// Kolom komentar pengunjung.
-// props: bookId, comments (komentar milik buku ini saja), onAddComment
 export default function CommentSection({ bookId, comments, onAddComment }) {
   const [name, setName] = useState("");
   const [rating, setRating] = useState(0);

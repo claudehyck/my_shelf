@@ -8,7 +8,7 @@ export default function Beranda({ books, comments, onDelete }) {
   const [category, setCategory] = useState("Semua");
   const [status, setStatus] = useState("Semua");
 
-  // daftar kategori otomatis dari data buku
+
   const categoryList = ["Semua", ...new Set(books.map((b) => b.category))];
 
   const filteredBooks = books.filter((b) => {
@@ -30,8 +30,8 @@ export default function Beranda({ books, comments, onDelete }) {
   return (
     <div className="page-container">
       <div className="hero">
-        <h1>Koleksi Buku Pribadi</h1>
-        <p>Perpustakaan digital berisi buku yang pernah saya miliki dan baca. Lihat detailnya, baca kesan pembaca lain, dan tinggalkan kesanmu.</p>
+        <h1>Buku-Buku Claudya</h1>
+        <p>Website ini berisi buku yang pernah saya miliki dan baca. Lihat detailnya, baca kesan pembaca lain, dan tinggalkan juga kesanmu!</p>
       </div>
 
       <div className="stats">

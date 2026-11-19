@@ -16,13 +16,11 @@ import Pesanan from "./pages/Pesanan";
 import "./App.css";
 
 export default function App() {
-  // ===== STATE UTAMA (disimpan di App lalu dikirim lewat props) =====
   const [books, setBooks] = useState(initialBooks);
   const [usedBooks, setUsedBooks] = useState(initialUsedBooks);
   const [comments, setComments] = useState(initialComments);
   const [orders, setOrders] = useState([]);
 
-  // Tambah buku koleksi. Jika saleInfo ada, buku juga dimasukkan ke daftar buku bekas.
   const handleAddBook = (newBook, saleInfo) => {
     setBooks([newBook, ...books]);
 
@@ -51,7 +49,6 @@ export default function App() {
     setComments([newComment, ...comments]);
   };
 
-  // Pengunjung memesan buku bekas -> catat pesanan + ubah status buku jadi "Dipesan"
   const handleOrder = (usedBookId, buyer) => {
     const item = usedBooks.find((u) => u.id === usedBookId);
 
@@ -60,7 +57,7 @@ export default function App() {
       bookTitle: item.title,
       price: item.price,
       date: tanggalHariIni(),
-      ...buyer, // name, phone, address, note
+      ...buyer, 
     };
 
     setOrders([newOrder, ...orders]);
