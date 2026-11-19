@@ -1,29 +1,215 @@
+// ================== KOLEKSI BUKU PRIBADI ==================
+// cover: boleh link internet ATAU file di folder public/covers (contoh "/covers/java-dasar.jpg").
+// Kalau cover kosong / gagal dimuat, otomatis tampil sampul pengganti.
 export const initialBooks = [
   {
     id: "1",
     title: "Pemrograman Java Dasar",
     author: "Budi Raharjo",
     year: 2023,
+    publisher: "Informatika",
+    pages: 320,
+    isbn: "-",
+    language: "Indonesia",
     category: "Pemrograman",
     status: "Selesai Dibaca",
-    notes: "Buku pertama yang saya pakai buat belajar dasar OOP dan Java."
+    rating: 4,
+    finishedAt: "Maret 2023",
+    cover: "/covers/java-dasar.jpg",
+    synopsis:
+      "Pengantar pemrograman Java dari nol: variabel, percabangan, perulangan, hingga konsep OOP seperti class, object, dan inheritance.",
+    notes: "Buku pertama yang saya pakai buat belajar dasar OOP dan Java.",
+    quote: "Belajar pemrograman itu bukan menghafal sintaks, tapi melatih cara berpikir.",
+    recommendedFor: "Pemula yang baru mulai belajar Java",
   },
   {
     id: "2",
     title: "Algoritma dan Struktur Data",
     author: "Rinaldi Munir",
     year: 2022,
+    publisher: "Informatika",
+    pages: 450,
+    isbn: "-",
+    language: "Indonesia",
     category: "Kuliah",
     status: "Selesai Dibaca",
-    notes: "Bagus untuk melatih logika berpikir dasar."
+    rating: 5,
+    finishedAt: "Januari 2023",
+    cover: "/covers/algoritma.jpg",
+    synopsis:
+      "Membahas algoritma dasar, kompleksitas, array, linked list, stack, queue, tree, hingga graf dengan contoh yang runut.",
+    notes: "Bagus untuk melatih logika berpikir dasar.",
+    quote: "Algoritma yang baik adalah yang benar dulu, baru efisien.",
+    recommendedFor: "Mahasiswa Informatika semester awal",
   },
   {
     id: "3",
     title: "Clean Code",
     author: "Robert C. Martin",
     year: 2021,
+    publisher: "Prentice Hall",
+    pages: 464,
+    isbn: "9780132350884",
+    language: "Inggris",
     category: "Software",
     status: "Sedang Dibaca",
-    notes: "Belajar penulisan kode yang bersih dan rapi."
-  }
+    rating: 5,
+    finishedAt: "",
+    cover: "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg",
+    synopsis:
+      "Panduan menulis kode yang rapi, mudah dibaca, dan mudah dirawat: penamaan, fungsi kecil, komentar, hingga penanganan error.",
+    notes: "Belajar penulisan kode yang bersih dan rapi.",
+    quote: "Kode yang bersih terlihat seperti ditulis oleh seseorang yang peduli.",
+    recommendedFor: "Programmer yang sudah bisa dasar dan ingin kodenya lebih rapi",
+  },
+  {
+    id: "4",
+    title: "Atomic Habits",
+    author: "James Clear",
+    year: 2018,
+    publisher: "Avery",
+    pages: 320,
+    isbn: "9780735211292",
+    language: "Inggris",
+    category: "Pengembangan Diri",
+    status: "Selesai Dibaca",
+    rating: 5,
+    finishedAt: "Juni 2024",
+    cover: "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg",
+    synopsis:
+      "Cara membangun kebiasaan baik lewat perubahan kecil yang konsisten. Berisi kerangka praktis: buat jelas, menarik, mudah, dan memuaskan.",
+    notes: "Mengubah cara saya mengatur jadwal belajar harian.",
+    quote: "Kamu tidak naik ke level tujuanmu, kamu jatuh ke level sistemmu.",
+    recommendedFor: "Siapa saja yang ingin lebih disiplin",
+  },
+  {
+    id: "5",
+    title: "The Pragmatic Programmer",
+    author: "David Thomas & Andrew Hunt",
+    year: 2019,
+    publisher: "Addison-Wesley",
+    pages: 352,
+    isbn: "9780135957059",
+    language: "Inggris",
+    category: "Software",
+    status: "Ingin Dibaca",
+    rating: 0,
+    finishedAt: "",
+    cover: "https://covers.openlibrary.org/b/isbn/9780135957059-L.jpg",
+    synopsis:
+      "Kumpulan tips praktis menjadi programmer yang andal, mulai dari mindset, debugging, sampai cara bekerja dalam tim.",
+    notes: "Masuk daftar tunggu bacaan berikutnya.",
+    quote: "",
+    recommendedFor: "Programmer yang ingin naik level",
+  },
+  {
+    id: "6",
+    title: "Laskar Pelangi",
+    author: "Andrea Hirata",
+    year: 2005,
+    publisher: "Bentang Pustaka",
+    pages: 529,
+    isbn: "-",
+    language: "Indonesia",
+    category: "Novel",
+    status: "Selesai Dibaca",
+    rating: 5,
+    finishedAt: "Agustus 2020",
+    cover: "/covers/laskar-pelangi.jpg",
+    synopsis:
+      "Kisah sepuluh anak di Belitung yang berjuang mengejar pendidikan dengan segala keterbatasan, dipenuhi persahabatan dan mimpi.",
+    notes: "Novel yang bikin semangat belajar naik lagi.",
+    quote: "",
+    recommendedFor: "Pembaca yang suka cerita inspiratif",
+  },
 ];
+
+// ================== BUKU BEKAS YANG DIJUAL ==================
+// status: "Tersedia" | "Dipesan" | "Terjual"
+// condition: "Seperti Baru" | "Baik" | "Cukup"
+export const initialUsedBooks = [
+  {
+    id: "u1",
+    title: "Atomic Habits",
+    author: "James Clear",
+    year: 2018,
+    cover: "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg",
+    condition: "Seperti Baru",
+    price: 75000,
+    note: "Sudah dibaca sekali, tanpa coretan. Sampul sedikit lecet di pojok.",
+    status: "Tersedia",
+  },
+  {
+    id: "u2",
+    title: "Algoritma dan Struktur Data",
+    author: "Rinaldi Munir",
+    year: 2022,
+    cover: "/covers/algoritma.jpg",
+    condition: "Baik",
+    price: 55000,
+    note: "Ada stabilo di beberapa bab, semua halaman lengkap.",
+    status: "Tersedia",
+  },
+  {
+    id: "u3",
+    title: "Laskar Pelangi",
+    author: "Andrea Hirata",
+    year: 2005,
+    cover: "/covers/laskar-pelangi.jpg",
+    condition: "Cukup",
+    price: 40000,
+    note: "Halaman menguning karena usia, tapi masih utuh dan nyaman dibaca.",
+    status: "Tersedia",
+  },
+  {
+    id: "u4",
+    title: "The Pragmatic Programmer",
+    author: "David Thomas & Andrew Hunt",
+    year: 2019,
+    cover: "https://covers.openlibrary.org/b/isbn/9780135957059-L.jpg",
+    condition: "Baik",
+    price: 180000,
+    note: "Kondisi mulus, hanya ada nama pemilik di halaman depan.",
+    status: "Terjual",
+  },
+];
+
+// ================== KOMENTAR PENGUNJUNG ==================
+export const initialComments = [
+  {
+    id: "c1",
+    bookId: "3",
+    name: "Dina",
+    rating: 5,
+    text: "Awalnya terasa berat, tapi setelah bab penamaan variabel saya langsung ubah gaya ngoding. Wajib buat yang kerja di tim.",
+    date: "2 November 2026",
+  },
+  {
+    id: "c2",
+    bookId: "3",
+    name: "Rafi",
+    rating: 4,
+    text: "Contoh kodenya pakai Java, jadi lebih mudah kalau sudah paham OOP dulu.",
+    date: "10 November 2026",
+  },
+  {
+    id: "c3",
+    bookId: "4",
+    name: "Salsa",
+    rating: 5,
+    text: "Bahasanya ringan, ide 'habit stacking' langsung bisa dipraktikkan besoknya.",
+    date: "5 November 2026",
+  },
+  {
+    id: "c4",
+    bookId: "1",
+    name: "Andi",
+    rating: 4,
+    text: "Penjelasannya runut untuk pemula, latihan soalnya cukup membantu.",
+    date: "14 November 2026",
+  },
+];
+
+export const categories = ["Pemrograman", "Kuliah", "Software", "Novel", "Pengembangan Diri", "Lainnya"];
+export const statuses = ["Selesai Dibaca", "Sedang Dibaca", "Ingin Dibaca"];
+export const conditions = ["Seperti Baru", "Baik", "Cukup"];

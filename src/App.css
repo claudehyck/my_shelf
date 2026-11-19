@@ -1,11 +1,22 @@
-body {
-  margin: 0;
-  background-color: #FDFFF4; 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #3A331E;
-}
-
 .app-main {
   min-height: 100vh;
-  background-color: #FDFFF4;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(184, 134, 47, 0.08), transparent 40%),
+    var(--bg);
+}
+
+.app-content { flex: 1; }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 22px;
+  margin-top: 40px;
+  background: var(--green-dark);
+  color: var(--gold-soft);
+  font-size: 14px;
 }
