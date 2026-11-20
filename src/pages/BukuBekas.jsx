@@ -1,12 +1,10 @@
 import { useState } from "react";
-import { Search, ShoppingBag, MousePointerClick, ClipboardList, MessageCircle } from "lucide-react";
+import { Search, ShoppingBag, MousePointerClick, MessageCircle, Truck } from "lucide-react";
 import UsedBookCard from "../components/UsedBookCard";
-import OrderModal from "../components/OrderModal";
 import "./Pages.css";
 
-export default function BukuBekas({ usedBooks, onOrder }) {
+export default function BukuBekas({ usedBooks }) {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selected, setSelected] = useState(null); 
 
   const filtered = usedBooks.filter((u) =>
     u.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -14,8 +12,8 @@ export default function BukuBekas({ usedBooks, onOrder }) {
 
   const steps = [
     { icon: <MousePointerClick size={22} />, text: "Pilih buku & cek kondisinya" },
-    { icon: <ClipboardList size={22} />, text: "Isi form pemesanan" },
-    { icon: <MessageCircle size={22} />, text: "Penjual konfirmasi via WhatsApp" },
+    { icon: <MessageCircle size={22} />, text: "Klik pesan, lanjut chat via WhatsApp" },
+    { icon: <Truck size={22} />, text: "Buku dikemas & dikirim ke alamatmu" },
   ];
 
   return (
@@ -53,17 +51,9 @@ export default function BukuBekas({ usedBooks, onOrder }) {
       ) : (
         <div className="book-grid">
           {filtered.map((item) => (
-            <UsedBookCard key={item.id} item={item} onOrder={setSelected} />
+            <UsedBookCard key={item.id} item={item} />
           ))}
         </div>
-      )}
-
-      {selected && (
-        <OrderModal
-          item={selected}
-          onClose={() => setSelected(null)}
-          onSubmit={(buyer) => onOrder(selected.id, buyer)}
-        />
       )}
     </div>
   );
