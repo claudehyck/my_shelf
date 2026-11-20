@@ -32,7 +32,7 @@ export const initialBooks = [
     status: "Selesai Dibaca",
     rating: 5,
     finishedAt: "Oktober 2025",
-    cover: "/covers/fourth-wing.jpg",
+    cover: "/covers/fourth_wing.jpg",
     synopsis:
       "Novel fantasi romansa karya Rebecca Yarros dan buku pertama dari seri The Empyrean yang mengisahkan Violet Sorrengail, gadis berusia 20 tahun yang dipaksa ibunya masuk ke akademi militer mematikan Basgiath War College untuk menjadi penunggang naga di kerajaan Navarre.",
     notes: "Cerita ini menonjolkan enemies-to-lovers, romance, dan petualangan di dunia fantasi. Cocok buat yang suka cerita naga dan intrik kerajaan.",
@@ -52,7 +52,7 @@ export const initialBooks = [
     status: "Selesai Dibaca",
     rating: 4,
     finishedAt: "Oktober 2025",
-    cover: "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg",
+    cover: "/covers/educated.jpg",
     synopsis:
       "Memoar yang mengisahkan perjuangannya keluar dari isolasi keluarga survivalis di pegunungan Idaho untuk meraih pendidikan formal hingga tingkat doktoral.",
     notes: "Agar kita belajar berjuang dan mecari makna belajar sebagai jalan mengubah hidup.",
@@ -72,7 +72,7 @@ export const initialBooks = [
     status: "Selesai Dibaca",
     rating: 5,
     finishedAt: "Juni 2024",
-    cover: "https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg",
+    cover: "/covers/mysql.jpg",
     synopsis:
       "Pengenalan tiga pemrograman website sekaligus (HTML, PHP, dan MySQL) untuk pemula, mulai dari dasar hingga membuat website sederhana.",
     notes: "Membantu pembaca menjadi seorang web developer yang handal.",
@@ -92,7 +92,7 @@ export const initialBooks = [
     status: "Sedang Dibaca",
     rating: 0,
     finishedAt: "",
-    cover: "https://covers.openlibrary.org/b/isbn/9780135957059-L.jpg",
+    cover: "/covers/the_war.png",
     synopsis:
       "Bercerita tentang invasi brutal makhluk Mars ke Bumi menggunakan mesin perang raksasa berkaki tiga (Tripod) dan perjuangan seorang narator untuk bertahan hidup di tengah kehancuran Inggris era Victoria.",
     notes: "...",
@@ -112,7 +112,7 @@ export const initialBooks = [
     status: "Ingin Dibaca",
     rating: 0,
     finishedAt: "",
-    cover: "/covers/let-them-theory.jpg",
+    cover: "/covers/let_them.jpg",
     synopsis:
       "Buku pengembangan diri yang mengajak agar berhenti menguras energi untuk mengendalikan orang lain dan kembali memfokuskan hidup pada diri sendiri.",
     notes: "",
