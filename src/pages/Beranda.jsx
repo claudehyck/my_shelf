@@ -3,7 +3,7 @@ import { Search, Library, BookCheck, BookOpen, Bookmark } from "lucide-react";
 import BookCard from "../components/BookCard";
 import "./Pages.css";
 
-export default function Beranda({ books, comments, onDelete }) {
+export default function Beranda({ books, comments, isOwner, onDelete }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [category, setCategory] = useState("Semua");
   const [status, setStatus] = useState("Semua");
@@ -30,8 +30,8 @@ export default function Beranda({ books, comments, onDelete }) {
   return (
     <div className="page-container">
       <div className="hero">
-        <h1>Buku-Buku Claudya</h1>
-        <p>Website ini berisi buku yang pernah saya miliki dan baca. Lihat detailnya, baca kesan pembaca lain, dan tinggalkan juga kesanmu!</p>
+        <h1>Koleksi Buku Pribadi</h1>
+        <p>Perpustakaan digital berisi buku yang pernah saya miliki dan baca. Lihat detailnya, baca kesan pembaca lain, dan tinggalkan kesanmu.</p>
       </div>
 
       <div className="stats">
@@ -89,6 +89,7 @@ export default function Beranda({ books, comments, onDelete }) {
               key={book.id}
               book={book}
               commentCount={comments.filter((c) => c.bookId === book.id).length}
+              isOwner={isOwner}
               onDelete={onDelete}
             />
           ))}

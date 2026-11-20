@@ -1,12 +1,21 @@
 import { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
-import { BookOpen, PlusCircle, Home, ShoppingBag, Package, Menu, X } from "lucide-react";
+import { NavLink, Link, useNavigate } from "react-router-dom";
+import {
+  BookOpen, PlusCircle, Home, ShoppingBag, Package, Menu, X, Lock, LogOut,
+} from "lucide-react";
 import "./Navbar.css";
 
-export default function Navbar({ orderCount }) {
-  const [open, setOpen] = useState(false); 
+export default function Navbar({ isOwner, orderCount, onLogout }) {
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   const closeMenu = () => setOpen(false);
+
+  const handleLogout = () => {
+    onLogout();
+    closeMenu();
+    navigate("/");
+  };
 
   return (
     <nav className="navbar">
@@ -26,13 +35,25 @@ export default function Navbar({ orderCount }) {
         <NavLink to="/second" onClick={closeMenu}>
           <ShoppingBag size={17} /> Buku Bekas
         </NavLink>
-        <NavLink to="/orders" onClick={closeMenu}>
-          <Package size={17} /> Pesanan
-          {orderCount > 0 && <span className="badge-count">{orderCount}</span>}
-        </NavLink>
-        <Link to="/add" className="btn-tambah" onClick={closeMenu}>
-          <PlusCircle size={18} /> Tambah Buku
-        </Link>
+
+        {isOwner ? (
+          <>
+            <NavLink to="/orders" onClick={closeMenu}>
+              <Package size={17} /> Pesanan
+              {orderCount > 0 && <span className="badge-count">{orderCount}</span>}
+            </NavLink>
+            <Link to="/add" className="btn-tambah" onClick={closeMenu}>
+              <PlusCircle size={18} /> Tambah Buku
+            </Link>
+            <button className="btn-logout" onClick={handleLogout}>
+              <LogOut size={17} /> Keluar
+            </button>
+          </>
+        ) : (
+          <NavLink to="/login" onClick={closeMenu}>
+            <Lock size={17} /> Pemilik
+          </NavLink>
+        )}
       </div>
     </nav>
   );

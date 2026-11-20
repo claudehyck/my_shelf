@@ -471,6 +471,7 @@
   .cover-preview .cover { align-self: center; }
 }
 
+
 .login-box { align-items: stretch; text-align: center; }
 .login-box h2 { color: var(--green); font-size: 26px; }
 .login-box .form-group { text-align: left; }
@@ -483,7 +484,7 @@
   border-radius: 50%;
 }
 
-/* ===== Panel pesanan ===== */
+
 .btn-add-order { width: 100%; margin-bottom: 16px; }
 .order-form { margin-bottom: 22px; }
 

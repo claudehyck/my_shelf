@@ -10,7 +10,7 @@ const statusClass = {
   "Ingin Dibaca": "ingin",
 };
 
-export default function BookCard({ book, commentCount, onDelete }) {
+export default function BookCard({ book, commentCount, isOwner, onDelete }) {
   const handleDelete = () => {
     if (window.confirm(`Hapus "${book.title}" dari koleksi?`)) {
       onDelete(book.id);
@@ -46,9 +46,11 @@ export default function BookCard({ book, commentCount, onDelete }) {
 
       <div className="card-footer">
         <Link to={`/book/${book.id}`}>Lihat Detail &rarr;</Link>
-        <button onClick={handleDelete} className="btn-hapus">
-          <Trash2 size={16} /> Hapus
-        </button>
+        {isOwner && (
+          <button onClick={handleDelete} className="btn-hapus">
+            <Trash2 size={16} /> Hapus
+          </button>
+        )}
       </div>
     </div>
   );

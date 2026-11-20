@@ -1,11 +1,14 @@
-import { ShoppingCart, Tag } from "lucide-react";
+import { MessageCircle, Tag } from "lucide-react";
 import BookCover from "./BookCover";
-import { formatRupiah } from "../utils/format";
+import { formatRupiah, waLink } from "../utils/format";
+import { OWNER_WA } from "../utils/config";
 import "./BookCard.css";
 
-export default function UsedBookCard({ item, onOrder }) {
+export default function UsedBookCard({ item }) {
   const tersedia = item.status === "Tersedia";
   const kondisiClass = item.condition.toLowerCase().replace(" ", "-"); 
+
+  const pesan = `Halo kak, saya tertarik dengan buku bekas "${item.title}" (${formatRupiah(item.price)}). Apakah masih tersedia?`;
 
   return (
     <div className={`book-card ${tersedia ? "" : "dim"}`}>
@@ -28,13 +31,18 @@ export default function UsedBookCard({ item, onOrder }) {
       </div>
 
       <div className="card-footer">
-        <button
-          className="btn-pesan"
-          disabled={!tersedia}
-          onClick={() => onOrder(item)}
-        >
-          <ShoppingCart size={16} /> {tersedia ? "Pesan Buku" : item.status}
-        </button>
+        {tersedia ? (
+          <a
+            className="btn-pesan"
+            href={waLink(OWNER_WA, pesan)}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <MessageCircle size={16} /> Pesan via WhatsApp
+          </a>
+        ) : (
+          <button className="btn-pesan" disabled>{item.status}</button>
+        )}
       </div>
     </div>
   );
