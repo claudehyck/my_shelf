@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-/* ===== Hero ===== */
+
 .hero { text-align: center; margin-bottom: 28px; }
 .hero h1 {
   font-size: 44px;
@@ -470,3 +470,81 @@
   .cover-preview { flex-direction: column; align-items: stretch; }
   .cover-preview .cover { align-self: center; }
 }
+
+.login-box { align-items: stretch; text-align: center; }
+.login-box h2 { color: var(--green); font-size: 26px; }
+.login-box .form-group { text-align: left; }
+.login-icon {
+  align-self: center;
+  display: flex;
+  padding: 16px;
+  background: var(--gold-soft);
+  color: var(--brown);
+  border-radius: 50%;
+}
+
+/* ===== Panel pesanan ===== */
+.btn-add-order { width: 100%; margin-bottom: 16px; }
+.order-form { margin-bottom: 22px; }
+
+.tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: 1.5px solid var(--border);
+  background: var(--paper);
+  color: var(--brown);
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tab.active { background: var(--green); border-color: var(--green); color: #fff; }
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin: 14px 0;
+}
+.stp {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.stp .dot {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--border);
+  font-size: 12px;
+  font-weight: 700;
+}
+.stp.done { color: var(--green); font-weight: 600; }
+.stp.done .dot { background: var(--green); color: #fff; }
+
+.order-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.btn-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-mini.wa { color: #25805A; border-color: #25805A; }
+.btn-mini.primary { background: var(--green); border-color: var(--green); color: #fff; }
+.btn-mini.danger { color: var(--danger); border-color: var(--danger); margin-left: auto; }
+.btn-mini:hover { opacity: 0.85; }

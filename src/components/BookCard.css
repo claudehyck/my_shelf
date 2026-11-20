@@ -30,7 +30,7 @@
 .cover-fallback.sm { font-size: 9px; padding: 6px; border-left-width: 5px; }
 .cover-fallback.lg { font-size: 18px; padding: 20px; }
 
-
+/* ===== Kartu buku ===== */
 .book-card {
   position: relative;
   display: flex;
@@ -50,7 +50,7 @@
 
 .book-card.dim .cover { filter: grayscale(0.7); opacity: 0.8; }
 
-
+/* area "rak" tempat sampul berdiri */
 .card-shelf {
   position: relative;
   display: flex;
@@ -185,7 +185,10 @@
 .btn-pesan:hover:not(:disabled) { background: var(--green-dark); }
 .btn-pesan:disabled { background: #B9AE98; cursor: not-allowed; }
 
-
 .stars { display: inline-flex; gap: 2px; }
 .star { color: #CDBF9F; }
 .star.on { color: #E0A426; }
+
+
+a.btn-pesan { text-decoration: none; background: #25805A; color: #fff; }
+a.btn-pesan:hover { background: #1C6747; color: #fff; }
